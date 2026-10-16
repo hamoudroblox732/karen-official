@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d0b">
+<meta name="description" content="KAREN Official — الموقع الرسمي">
+<title>KAREN | Official</title>
+<style>
+:root {
+  --bg:#080d0b;
+  --panel:#101914;
+  --green:#36ef87;
+  --muted:#91a399;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  color:#f3fff7;
+  background:
+    radial-gradient(ellipse at 50% 0%,#123b2580,transparent 55%),
+    var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  min-height:100vh;
+}
+a { color:inherit;text-decoration:none; }
+header {
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  border-bottom:1px solid #ffffff0c;
+  background:#080d0bcc;
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter:blur(18px);
+}
+.logo {
+  display:flex;align-items:center;gap:11px;
+  font-size:22px;font-weight:900;letter-spacing:2px;
+}
+.logo-icon {
+  width:40px;height:40px;border-radius:13px;
+  display:grid;place-items:center;
+  color:var(--green);
+  background:#153a26;
+  border:1px solid #36ef8740;
+  font-size:23px;
+}
+.header-label {
+  color:var(--green);font-size:11px;
+  border:1px solid #36ef8735;
+  padding:8px 12px;border-radius:30px;
+}
+main {
+  width:min(100% - 36px,900px);
+  margin:auto;
+}
+.hero {
+  text-align:center;
+  padding:86px 0 65px;
+  position:relative;
+}
+.eyebrow {
+  display:inline-flex;align-items:center;gap:9px;
+  color:#9debbb;background:#10271a;
+  border:1px solid #36ef8730;
+  border-radius:30px;padding:9px 15px;
+  font-size:12px;
+}
+.dot {
+  width:8px;height:8px;background:var(--green);
+  border-radius:50%;box-shadow:0 0 13px var(--green);
+}
+h1 {
+  font-size:clamp(48px,10vw,88px);
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin:27px 0 18px;
+  font-weight:950;
+}
+h1 span {
+  color:var(--green);
+  text-shadow:0 0 38px #36ef8735;
+}
+.subtitle {
+  color:var(--muted);line-height:2;
+  font-size:15px;max-width:510px;margin:0 auto;
+}
+.download-card {
+  max-width:570px;margin:36px auto 0;
+  padding:25px;
+  background:linear-gradient(145deg,#13241a,#0d1510);
+  border:1px solid #36ef8730;
+  border-radius:25px;
+  box-shadow:0 20px 80px #0008,0 0 45px #36ef8709;
+}
+.status {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 13px;border-radius:30px;
+  background:#12351f;color:#70f5a5;
+  font-size:12px;font-weight:800;
+  margin-bottom:19px;
+}
+.status.offline {background:#3b1717;color:#ff8c8c;}
+.status.offline .dot {
+  background:#ff5151;box-shadow:0 0 10px #ff5151;
+}
+.download-button {
+  min-height:88px;
+  display:flex;align-items:center;justify-content:center;
+  gap:14px;width:100%;
+  border:1px solid #83ffb3;
+  border-radius:17px;
+  background:linear-gradient(110deg,#16843e,#25c963,#16843e);
+  background-size:200% 100%;
+  color:white;
+  font-size:21px;font-weight:950;
+  box-shadow:0 0 25px #20df6940,inset 0 1px #ffffff50;
+  animation:shine 4s linear infinite;
+  transition:transform .2s,filter .2s;
+}
+.download-button:active {transform:scale(.98);}
+.download-button:hover {filter:brightness(1.15);}
+.download-button svg {width:27px;height:27px;}
+@keyframes shine {
+  0% {background-position:100% 0;}
+  100% {background-position:-100% 0;}
+}
+.small-note {
+  color:#82948a;font-size:12px;line-height:1.9;
+  margin:16px 0 0;
+}
+.section-title {
+  text-align:center;font-size:24px;margin:15px 0 25px;
+}
+.features {
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:14px;margin-bottom:60px;
+}
+.feature {
+  background:linear-gradient(145deg,#121b15,#0c120e);
+  border:1px solid #ffffff0d;border-radius:19px;
+  padding:22px;text-align:right;
+}
+.feature-icon {
+  width:43px;height:43px;display:grid;place-items:center;
+  border-radius:13px;background:#173321;
+  color:var(--green);font-size:22px;margin-bottom:15px;
+}
+.feature h3 {font-size:16px;margin:0 0 9px;}
+.feature p {
+  color:var(--muted);font-size:12px;
+  line-height:1.9;margin:0;
+}
+.discord {
+  text-align:center;padding:35px 15px;
+  border:1px solid #ffffff12;border-radius:22px;
+  background:#0d1510;margin-bottom:55px;
+}
+.discord p {color:var(--muted);font-size:13px;line-height:2;}
+.discord-button {
+  display:inline-flex;padding:13px 25px;
+  border:1px solid #36ef8740;border-radius:12px;
+  color:var(--green);font-weight:800;margin-top:8px;
+}
+footer {
+  border-top:1px solid #ffffff10;
+  text-align:center;padding:28px 15px 35px;
+  color:#74857a;font-size:11px;line-height:2.2;
+}
+footer strong {color:#c5f6d4;}
+@media(max-width:520px) {
+  header {height:67px;padding:0 18px;}
+  .logo {font-size:19px;}
+  .hero {padding:65px 0 48px;}
+  .download-card {padding:17px;border-radius:20px;}
+  .download-button {font-size:18px;min-height:78px;}
+  .features {gap:10px;}
+  .feature {padding:16px;}
+  .feature h3 {font-size:14px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none!important;scroll-behavior:auto!important;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#" aria-label="KAREN Home">
+    <span class="logo-icon">K</span>
+    <span>KAREN</span>
+  </a>
+  <span class="header-label">OFFICIAL PLATFORM</span>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      KAREN OFFICIAL WEBSITE
+    </div>
+
+    <h1>WELCOME TO<br><span>KAREN.</span></h1>
+
+    <p class="subtitle">
+      منصتك الرسمية — كل شيء تحتاجه في مكان واحد،
+      بتجربة سريعة وتصميم صنعناه بعناية.
+    </p>
+
+    <div class="download-card">
+      <div class="status" id="statusBadge" role="status">
+        <span class="dot"></span>
+        <span id="status">يعمل</span>
+      </div>
+
+      <a class="download-button"
+         href="https://nxt-t.netlify.app/ios3"
+         target="_blank"
+         rel="noopener noreferrer"
+         id="deltaButton">
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M12 3v12m-5-5 5 5 5-5"/>
+          <path d="M5 17v3h14v-3"/>
+        </svg>
+        <span>DELTA IPHONE</span>
+      </a>
+
+      <p class="small-note">
+        اضغط على الزر للانتقال إلى صفحة Delta iPhone.
+        تأكد من توافق الصفحة مع جهازك قبل التثبيت.
+      </p>
+    </div>
+  </section>
+
+  <h2 class="section-title">WHY KAREN?</h2>
+
+  <section class="features">
+    <article class="feature">
+      <div class="feature-icon">✦</div>
+      <h3>تصميم مميز</h3>
+      <p>واجهة داكنة ولمسات خضراء بتفاصيل عصرية.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">↗</div>
+      <h3>وصول سريع</h3>
+      <p>زر واضح للوصول إلى صفحة Delta iPhone.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">▣</div>
+      <h3>متوافق مع الجوال</h3>
+      <p>تصفح سهل من الآيفون والآيباد والكمبيوتر.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">K</div>
+      <h3>هوية KAREN</h3>
+      <p>منصة تحمل اسم Karen وحقوق الموقع.</p>
+    </article>
+  </section>
+
+  <section class="discord">
+    <div class="feature-icon" style="margin:0 auto 15px;">◎</div>
+    <h2>JOIN OUR COMMUNITY</h2>
+    <p>تابع أخبار Karen وانضم إلى مجتمعنا على Discord.</p>
+    <a class="discord-button"
+       href="https://discord.gg/BzpFr7vFa"
+       target="_blank"
+       rel="noopener noreferrer">
+      دخول سيرفر KAREN ↗
+    </a>
+  </section>
+</main>
+
+<footer>
+  <strong>KAREN</strong> — OFFICIAL WEBSITE<br>
+  © <span id="year"></span> KAREN. ALL RIGHTS RESERVED.<br>
+  جميع الحقوق محفوظة لأصحاب الموقع.
+</footer>
+
+<script>
+/*
+  غيّر السطر التالي فقط:
+  "يعمل" أو "مايعمل"
+*/
+const DELTA_STATUS = "يعمل";
+
+const statusText = document.getElementById("status");
+const statusBadge = document.getElementById("statusBadge");
+const deltaButton = document.getElementById("deltaButton");
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+if (DELTA_STATUS === "مايعمل") {
+  statusText.textContent = "مايعمل";
+  statusBadge.classList.add("offline");
+  deltaButton.style.opacity = "0.55";
+  deltaButton.style.filter = "grayscale(0.7)";
+  deltaButton.removeAttribute("href");
+  deltaButton.removeAttribute("target");
+  deltaButton.setAttribute("aria-disabled", "true");
+  deltaButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  });
+} else {
+  statusText.textContent = "يعمل";
+}
+</script>
+</body>
+</html>
