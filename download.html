@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171912">
+<title>KAREN | DELTA IPHONE</title>
+<style>
+:root {
+  --bg:#171912;
+  --panel:#202219;
+  --matcha:#a3a785;
+  --matcha-dark:#777d5e;
+  --text:#f2f0e5;
+  --muted:#b5b5a5;
+  --green:#a7f5bc;
+}
+* {box-sizing:border-box;}
+body {
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 50% 0%,#858b6020,transparent 60%),
+    var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  border-bottom:1px solid #ffffff12;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.logo {
+  width:39px;height:39px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  color:var(--matcha);
+  border:1px solid var(--matcha-dark);
+  background:#858b601c;
+}
+.back {
+  color:var(--matcha);
+  text-decoration:none;
+  font-size:13px;
+}
+main {
+  width:min(100% - 32px,650px);
+  margin:55px auto;
+}
+.panel {
+  padding:30px 22px;
+  border:1px solid #a3a78538;
+  border-radius:24px;
+  background:linear-gradient(145deg,#24271d,#1b1d16);
+  text-align:center;
+  box-shadow:0 20px 65px #0003;
+}
+.status {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 15px;
+  border-radius:30px;
+  background:#183723;
+  color:var(--green);
+  font-size:13px;
+  font-weight:800;
+}
+.dot {
+  width:8px;height:8px;
+  background:var(--green);
+  border-radius:50%;
+  box-shadow:0 0 12px #a7f5bc80;
+}
+h1 {
+  font-size:clamp(30px,8vw,44px);
+  margin:25px 0 12px;
+}
+p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+}
+.download {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  min-height:82px;
+  margin-top:25px;
+  border-radius:17px;
+  border:1px solid #baf9ca;
+  color:white;
+  background:linear-gradient(110deg,#168e49,#36d976,#168e49);
+  background-size:200% 100%;
+  font-size:20px;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 0 30px #36d97630;
+  animation:shine 4s linear infinite;
+}
+.download:active {transform:scale(.98);}
+@keyframes shine {
+  from {background-position:100% 0;}
+  to {background-position:-100% 0;}
+}
+.note {
+  margin-top:18px;
+  font-size:12px;
+}
+.info {
+  margin-top:18px;
+  padding:18px;
+  border:1px solid #a3a78528;
+  border-radius:16px;
+  text-align:right;
+}
+.info h2 {
+  font-size:15px;
+  color:var(--matcha);
+  margin-top:0;
+}
+.info p {font-size:13px;margin-bottom:0;}
+footer {
+  padding:25px 15px;
+  border-top:1px solid #ffffff12;
+  color:var(--muted);
+  font-size:11px;
+  text-align:center;
+  line-height:2;
+}
+@media(prefers-reduced-motion:reduce) {
+  .download {animation:none;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">K</span>
+    <span>KAREN</span>
+  </div>
+  <a class="back" href="index.html">الصفحة الرئيسية ↩</a>
+</header>
+
+<main>
+  <section class="panel">
+    <div class="status" id="statusBadge">
+      <span class="dot"></span>
+      <span id="status">يعمل</span>
+    </div>
+
+    <h1>DELTA IPHONE</h1>
+    <p>
+      اضغط على الزر للانتقال إلى صفحة Delta iPhone.
+    </p>
+
+    <a class="download"
+       id="deltaButton"
+       href="https://nxt-t.netlify.app/ios3"
+       target="_blank"
+       rel="noopener noreferrer">
+      ↓ &nbsp; DELTA IPHONE
+    </a>
+
+    <p class="note">
+      التثبيت والتوافق يعتمدان على الصفحة الخارجية وجهازك.
+    </p>
+  </section>
+
+  <section class="info">
+    <h2>معلومات الموقع</h2>
+    <p>
+      هذه الصفحة تابعة لموقع KAREN الرسمي.
+      استخدم الرابط الخارجي على مسؤوليتك وتحقق من مصدره قبل تثبيت أي ملف.
+    </p>
+  </section>
+</main>
+
+<footer>
+  © KAREN — ALL RIGHTS RESERVED
+  <br>
+  <a href="https://discord.gg/BzpFr7vFa"
+     style="color:inherit;text-decoration:none">
+    KAREN DISCORD
+  </a>
+</footer>
+
+<script>
+/*
+  غيّر هذه القيمة فقط:
+  "يعمل" أو "مايعمل"
+*/
+const DELTA_STATUS = "يعمل";
+
+const statusText = document.getElementById("status");
+const statusBadge = document.getElementById("statusBadge");
+const deltaButton = document.getElementById("deltaButton");
+
+if (DELTA_STATUS === "مايعمل") {
+  statusText.textContent = "مايعمل";
+  statusBadge.style.background = "#472525";
+  statusBadge.style.color = "#ffb1b1";
+  statusBadge.querySelector(".dot").style.background = "#ff7777";
+  statusBadge.querySelector(".dot").style.boxShadow = "none";
+  deltaButton.removeAttribute("href");
+  deltaButton.removeAttribute("target");
+  deltaButton.style.opacity = "0.45";
+  deltaButton.style.filter = "grayscale(1)";
+  deltaButton.setAttribute("aria-disabled", "true");
+  deltaButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  });
+}
+</script>
+</body>
+</html>
