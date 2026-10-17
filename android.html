@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171912">
+<meta name="description" content="KAREN Official - Delta Android">
+<title>KAREN | DELTA ANDROID</title>
+
+<style>
+:root {
+  --bg:#171912;
+  --panel:#22241b;
+  --matcha:#a3a785;
+  --matcha-dark:#777d5e;
+  --text:#f2f0e5;
+  --muted:#b5b5a5;
+  --green:#a7f5bc;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 50% 0%,#858b6025,transparent 60%),
+    var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a {text-decoration:none}
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 7%;
+  border-bottom:1px solid #ffffff12;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:var(--text);
+}
+.logo {
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  color:var(--matcha);
+  border:1px solid var(--matcha-dark);
+  background:#858b601c;
+}
+.back {
+  color:var(--matcha);
+  font-size:12px;
+}
+main {
+  width:min(100% - 32px,650px);
+  margin:auto;
+  padding:55px 0;
+  flex:1;
+}
+.panel {
+  padding:30px 22px;
+  border:1px solid #a3a78538;
+  border-radius:24px;
+  background:linear-gradient(145deg,#292b20,#1b1d16);
+  text-align:center;
+  box-shadow:0 20px 65px #0003;
+}
+.platform {
+  display:inline-block;
+  padding:9px 15px;
+  border:1px solid #a3a78550;
+  border-radius:30px;
+  color:var(--matcha);
+  font-size:12px;
+  letter-spacing:1px;
+}
+h1 {
+  font-size:clamp(32px,8vw,46px);
+  margin:26px 0 12px;
+}
+.description {
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+}
+.status {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-top:15px;
+  padding:9px 15px;
+  border-radius:30px;
+  background:#183723;
+  color:var(--green);
+  font-size:13px;
+  font-weight:800;
+}
+.dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px #a7f5bc80;
+}
+.download {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  width:100%;
+  min-height:84px;
+  margin-top:25px;
+  border:1px solid #baf9ca;
+  border-radius:17px;
+  color:white;
+  background:linear-gradient(110deg,#168e49,#36d976,#168e49);
+  background-size:200% 100%;
+  font-size:20px;
+  font-weight:900;
+  box-shadow:0 0 30px #36d97630;
+  animation:shine 4s linear infinite;
+  transition:transform .2s;
+}
+.download:active {transform:scale(.98)}
+@keyframes shine {
+  from {background-position:100% 0}
+  to {background-position:-100% 0}
+}
+.info {
+  margin-top:18px;
+  padding:20px;
+  border:1px solid #a3a78528;
+  border-radius:17px;
+  text-align:right;
+}
+.info h2 {
+  margin-top:0;
+  color:var(--matcha);
+  font-size:15px;
+}
+.info p {
+  margin-bottom:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:2;
+}
+footer {
+  padding:25px 15px;
+  border-top:1px solid #ffffff12;
+  color:var(--muted);
+  text-align:center;
+  font-size:11px;
+  line-height:2.2;
+}
+footer a {color:var(--matcha)}
+@media(max-width:520px) {
+  header {padding:18px}
+  .brand {font-size:19px}
+  .panel {padding:25px 17px}
+  .download {font-size:18px;min-height:76px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .download {animation:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span class="logo">K</span>
+    <span>KAREN</span>
+  </a>
+  <a class="back" href="index.html">الرئيسية ↩</a>
+</header>
+
+<main>
+  <section class="panel">
+    <span class="platform">ANDROID EDITION</span>
+
+    <h1>DELTA ANDROID</h1>
+
+    <p class="description">
+      صفحة تحميل Delta لأجهزة أندرويد
+      <br>
+      اضغط على الزر للانتقال إلى ملف APK.
+    </p>
+
+    <div class="status" id="statusBadge" role="status">
+      <span class="dot"></span>
+      <span id="status">يعمل</span>
+    </div>
+
+    <a
+      class="download"
+      id="downloadButton"
+      href="https://delta.filenetwork.vip/file/Delta-2.741.1062.apk"
+      target="_blank"
+      rel="noopener noreferrer">
+      <span>↓</span>
+      <span>تحميل أندرويد</span>
+    </a>
+
+    <p class="description">
+      صيغة الملف: APK
+      <br>
+      تأكد من مصدر الملف قبل تثبيته على جهازك.
+    </p>
+  </section>
+
+  <section class="info">
+    <h2>معلومات الصفحة</h2>
+    <p>
+      المنصة: Android
+      <br>
+      الموقع: KAREN Official
+      <br>
+      © KAREN — ALL RIGHTS RESERVED
+    </p>
+  </section>
+</main>
+
+<footer>
+  KAREN OFFICIAL
+  <br>
+  © KAREN — ALL RIGHTS RESERVED
+  <br>
+  <a href="https://discord.gg/BzpFr7vFa"
+     target="_blank"
+     rel="noopener noreferrer">
+    KAREN DISCORD
+  </a>
+</footer>
+
+<script>
+// غيّر القيمة إلى "مايعمل" عند تعطل الرابط
+const DELTA_STATUS = "يعمل";
+
+const status = document.getElementById("status");
+const badge = document.getElementById("statusBadge");
+const button = document.getElementById("downloadButton");
+
+if (DELTA_STATUS === "مايعمل") {
+  status.textContent = "مايعمل";
+  status.style.color = "#ffb1b1";
+  badge.style.background = "#472525";
+
+  const dot = badge.querySelector(".dot");
+  dot.style.background = "#ff7777";
+  dot.style.boxShadow = "none";
+
+  button.removeAttribute("href");
+  button.removeAttribute("target");
+  button.style.opacity = "0.45";
+  button.style.filter = "grayscale(1)";
+  button.setAttribute("aria-disabled", "true");
+
+  button.addEventListener("click", function(event) {
+    event.preventDefault();
+  });
+}
+</script>
+
+</body>
+</html>
