@@ -38,8 +38,10 @@ header {
   letter-spacing:2px;
 }
 .logo {
-  width:40px;height:40px;
-  display:grid;place-items:center;
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
   border-radius:12px;
   color:var(--matcha);
   border:1px solid var(--dark);
@@ -97,6 +99,7 @@ p {
   height:8px;
   border-radius:50%;
   background:var(--green);
+  box-shadow:0 0 10px #36d97680;
 }
 .buttons {
   display:grid;
@@ -123,12 +126,16 @@ p {
   text-decoration:none;
   transition:transform .2s;
 }
-.download-button:active {transform:scale(.98)}
+.download-button:active {
+  transform:scale(.98);
+}
 @keyframes shine {
   from {background-position:100% 0}
   to {background-position:-100% 0}
 }
-.arrow {font-size:25px}
+.arrow {
+  font-size:25px;
+}
 .back {
   display:inline-block;
   margin-top:25px;
@@ -150,7 +157,10 @@ footer {
   header {padding:18px}
   .brand {font-size:19px}
   .hero {padding:60px 0 45px}
-  .download-button {font-size:18px;min-height:76px}
+  .download-button {
+    font-size:18px;
+    min-height:76px;
+  }
 }
 @media(prefers-reduced-motion:reduce) {
   .download-button {animation:none}
@@ -180,11 +190,10 @@ footer {
     </div>
     <div class="buttons">
       <a class="download-button"
-         href="https://nxt-t.netlify.app/ios3"
-         target="_blank"
-         rel="noopener noreferrer">
+         href="./Roblox.Karen.ipa"
+         download="Roblox.Karen.ipa">
         <span>DELTA IPHONE</span>
-        <span class="arrow">↗</span>
+        <span class="arrow">↓</span>
       </a>
     </div>
     <a class="back" href="index.html">العودة للرئيسية ↗</a>
