@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171912">
+<title>روبلوكس القديمة | KAREN</title>
+<style>
+:root {
+  --bg:#171912;
+  --matcha:#a3a785;
+  --dark:#777d5e;
+  --text:#f2f0e5;
+  --muted:#b5b5a5;
+  --green:#36d976;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  background:radial-gradient(ellipse at 50% 0%,#858b6025,transparent 60%),var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  border-bottom:1px solid #ffffff12;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.logo {
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  color:var(--matcha);
+  border:1px solid var(--dark);
+  background:#858b601c;
+}
+.tag {
+  color:var(--matcha);
+  font-size:11px;
+  border:1px solid #a3a78550;
+  padding:8px 12px;
+  border-radius:30px;
+}
+main {
+  width:min(100% - 32px,680px);
+  margin:auto;
+}
+.hero {
+  text-align:center;
+  padding:75px 0 55px;
+}
+.eyebrow {
+  display:inline-block;
+  padding:9px 15px;
+  border:1px solid #a3a78550;
+  border-radius:30px;
+  color:var(--matcha);
+  font-size:12px;
+}
+h1 {
+  font-size:clamp(42px,10vw,70px);
+  letter-spacing:2px;
+  margin:28px 0 15px;
+}
+p {
+  color:var(--muted);
+  line-height:2;
+  font-size:14px;
+}
+.status {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:20px 0 25px;
+  padding:9px 16px;
+  color:var(--green);
+  background:#36d97618;
+  border:1px solid #36d97660;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:800;
+}
+.dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 10px #36d97680;
+}
+.buttons {
+  display:grid;
+  gap:16px;
+  max-width:550px;
+  margin:auto;
+}
+.download-button {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:13px;
+  min-height:84px;
+  padding:18px;
+  border:1px solid #baf9ca;
+  border-radius:18px;
+  color:white;
+  background:linear-gradient(110deg,#168e49,#36d976,#168e49);
+  background-size:200% 100%;
+  font-size:20px;
+  font-weight:900;
+  box-shadow:0 0 30px #36d97625;
+  animation:shine 4s linear infinite;
+  text-decoration:none;
+  transition:transform .2s;
+}
+.download-button:active {transform:scale(.98)}
+@keyframes shine {
+  from {background-position:100% 0}
+  to {background-position:-100% 0}
+}
+.arrow {font-size:25px}
+.back {
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 20px;
+  border:1px solid var(--dark);
+  border-radius:12px;
+  color:var(--matcha);
+  text-decoration:none;
+}
+footer {
+  padding:25px 15px;
+  border-top:1px solid #ffffff12;
+  text-align:center;
+  color:var(--muted);
+  font-size:11px;
+  line-height:2.2;
+}
+footer a {color:var(--matcha);text-decoration:none}
+@media(max-width:520px) {
+  header {padding:18px}
+  .brand {font-size:19px}
+  .hero {padding:60px 0 45px}
+  .download-button {font-size:18px;min-height:76px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .download-button {animation:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">K</span>
+    <span>KAREN</span>
+  </div>
+  <span class="tag">OFFICIAL</span>
+</header>
+<main>
+  <section class="hero">
+    <span class="eyebrow">KAREN OFFICIAL WEBSITE</span>
+    <h1>روبلوكس القديمة</h1>
+    <p>
+      صفحة تحميل روبلوكس القديمة
+      <br>
+      اضغط على الزر لبدء التثبيت.
+    </p>
+    <div class="status">
+      <span class="dot"></span>
+      متاح للتحميل
+    </div>
+    <div class="buttons">
+      <a class="download-button"
+         href="itms-services://?action=download-manifest&url=https%3A%2F%2Fmain.eonhubapp.com%2Fapi%2Fsigner%2Fmanifest%2FVmTDjawYLt_ZJ663AqYRqqxC">
+        <span>تحميل</span>
+        <span class="arrow">↓</span>
+      </a>
+    </div>
+    <a class="back" href="index.html">العودة للرئيسية ↗</a>
+  </section>
+</main>
+<footer>
+  KAREN OFFICIAL
+  <br>
+  © KAREN — ALL RIGHTS RESERVED
+  <br>
+  جميع الحقوق محفوظة لأصحاب الموقع.
+  <br>
+  <a href="https://discord.gg/BzpFr7vFa" target="_blank" rel="noopener noreferrer">DISCORD</a>
+</footer>
+</body>
+</html>
